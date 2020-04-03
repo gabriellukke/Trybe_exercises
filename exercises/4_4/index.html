@@ -39,28 +39,37 @@
       </div>
     </div>
     <script>
+      
+      /*
+      Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+      - document.getElementById()
+      - document.getElementsByClassName()
+      - document.getElementsByTagName()
+      1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+      2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+      3. Crie uma função que mude a cor do quadrado vermelho para branco.
+      4. Crie uma função que corrija o texto da tag <h1>.
+      5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+      */
+      
 
       //Exercise 1
-      function changeParagraph(text) {
-        document.getElementsByTagName('p')[1].innerHTML = text;
+      function changeParagraph() {
+        document.getElementsByTagName('p')[1].innerHTML = "I see myself as a fullstack developer";
       }
 
+      //Exercise 2
+      function changeSideColor() {
+        let mainContent = document.getElementsByClassName('main-content')[0];
+        mainContent.style.backgroundColor = "#59a56c";
+      }
 
-      changeParagraph('I see myself as a FullStack Developer');
+      changeParagraph();
 
-
-        /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-        - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
-        1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-        2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
-        3. Crie uma função que mude a cor do quadrado vermelho para branco.
-        4. Crie uma função que corrija o texto da tag <h1>.
-        5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-        6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
+      changeSideColor();
+          
+        
     </script>
   </body>
 </html>
