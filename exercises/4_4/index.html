@@ -77,6 +77,20 @@
         title.innerHTML = "Exercício 4.4 - Javascript";
       }
 
+      //Exercise 5
+      function upperCaseAll() {
+        let p = document.getElementsByTagName('p')[0];
+        p.innerHTML = p.innerHTML.toUpperCase();
+      }
+
+      //Exercise 6
+      function showConsole() {
+        let paragraphs = document.getElementsByTagName('p');
+        for (let i in paragraphs) {
+          console.log(paragraphs[i].innerHTML)
+        }
+      }
+
       changeParagraph();
 
       changeSideColor();
@@ -84,6 +98,10 @@
       changeCenterColor();
 
       ajustTitle();
+      
+      upperCaseAll();
+
+      showConsole();
 
         
     </script>
