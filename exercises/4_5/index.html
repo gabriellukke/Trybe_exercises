@@ -58,15 +58,27 @@
 
     <script>
       
+      //Ex01
       let h1 = document.createElement("h1");
-      h1.innerHTML = "Exercício 4.5 - JavaScript DOM"
-
+      h1.innerHTML = "Exercício 4.5 - JavaScript DOM";
       document.body.appendChild(h1);
 
-      let div = document.createElement("div");
-      div.className = "main-content";
+      //Ex02
+      let mainDiv = document.createElement("div");
+      mainDiv.className = "main-content";
+      document.body.appendChild(mainDiv);
 
-      document.body.appendChild(div);
+      //Ex03
+      let centerDiv = document.createElement("div");
+      centerDiv.className = "center-content";
+      mainDiv.appendChild(centerDiv);
+      
+      //Ex04
+      let paragraph = document.createElement("p");
+      paragraph.innerHTML = "Finge que tem algo de interessante escrito aqui"
+      centerDiv.appendChild(paragraph);
+
+
 
     </script>
   </body>
