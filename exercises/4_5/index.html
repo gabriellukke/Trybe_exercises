@@ -94,6 +94,15 @@
       randomImg.className = "small-image";
       leftDiv.appendChild(randomImg);
 
+      //Ex08
+      let uList= document.createElement("ul");
+      for (let i = 1; i <= 10; i++) {
+        let li = document.createElement("li");
+        li.innerHTML = i;
+        uList.appendChild(li);
+      }
+      rightDiv.appendChild(uList);
+
       
 
     </script>
