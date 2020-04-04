@@ -95,13 +95,13 @@
       leftDiv.appendChild(randomImg);
 
       //Ex08
-      let uList= document.createElement("ul");
+      let unoList= document.createElement("ul");
       for (let i = 1; i <= 10; i++) {
         let li = document.createElement("li");
         li.innerHTML = i;
-        uList.appendChild(li);
+        unoList.appendChild(li);
       }
-      rightDiv.appendChild(uList);
+      rightDiv.appendChild(unoList);
 
       //Ex09
       for (let i = 0; i < 3; i++) {
@@ -129,8 +129,9 @@
       //Ex05
       centerDiv.parentNode.style.backgroundColor = "green";
 
-      
-
+      //Ex06
+      unoList.removeChild(unoList.lastChild);
+      unoList.removeChild(unoList.lastChild);
 
     </script>
   </body>
