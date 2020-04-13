@@ -39,10 +39,15 @@
         <script language="javascript" type="text/javascript">
   
           const areaBtn = document.querySelector('.exampleblock');
-          const button = document.createElement("button");
-          button.className = "btn";
-          button.innerHTML = "Click on me";
-          areaBtn.appendChild(button);
+          const createBtn = document.createElement("button");
+          createBtn.className = "btn";
+          createBtn.innerHTML = "Click on me";
+          areaBtn.appendChild(createBtn);
+          
+          const btn = document.querySelector('.btn');
+          btn.addEventListener('click', function() {
+            alert("You clicked the button")
+          })
 
 
 
