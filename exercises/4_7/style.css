@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+body {
+  color: white;
+}
+
+header {
+  background-color: skyblue;
+  height: 90px;
+}
+
+#logo {
+  background-color: skyblue;
+  border-radius: 10px;
+  float: left;
+  margin: 15px 10px;
+  padding: 10px;
+}
+
+#logo:hover {
+  background-color: white;
+  border: 1px solid skyblue;
+  border-radius: 10px;
+  color: skyblue;
+  cursor: pointer;
+}
+
+header nav {
+  float: right;
+  margin-right: 20px;
+}
+
+header nav ul {
+  margin: 10px 0 0 10px;
+}
+
+header nav ul li {
+  background-color: skyblue;
+  border-radius: 10px;
+  float: left;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 5px;
+  list-style: none;
+  padding: 10px;
+}
+
+header nav ul li:hover {
+  background-color: white;
+  border-radius: 10px;
+  color: skyblue;
+  cursor: pointer;
+}
+
+.container {
+  background-color: skyblue;
+  border-radius: 70px;
+  float: left;
+  margin-left: 20px;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-top: 5px;
+  width: 800px;
+}
+
+.container article {
+  margin-bottom: 40px;
+}
+
+.container h1 {
+  margin: 30px;
+}
+
+.content {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 15px;
+}
+
+.custom {
+  background-color: skyblue;
+  border-radius: 30px;
+  float: left;
+  height: 250px;
+  margin-top: 50px;
+  width: 280px;
+}
+
+.custom-title {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.custom-content {
+  margin: 20px 10px;
+}
+
+.custom-content label {
+  float: left;
+  line-height: 20px;
+  padding-bottom: 10px;
+  width: 210px;
+}
+
+.custom-content input {
+  float: right;
+  height: 25px;
+  width: 40px;
+}
+
+.top-articles {
+  background-color: skyblue;
+  border-radius: 20px;
+  float: right;
+  height: 150px;
+  margin: 20px 20px 20px 0;
+  width: 230px;
+}
+
+.top-articles h3 {
+  margin: 10px 0 10px 10px;
+}
+
+.top-articles a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-articles a:hover {
+  color: aqua;
+}
+
+.top-articles ol li {
+  list-style: none;
+  margin: 6px;
+}
