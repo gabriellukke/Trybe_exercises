@@ -55,6 +55,22 @@
 
     </fieldset>
 
+    <fieldset>
+
+      <label for="curriculo">Resumo do currículo</label><br>
+      <textarea name="curriculo" id="curriculo" cols="50" rows="10" maxlength="1000" required="required"></textarea>
+
+      <label for="cargo"></label>
+      <input name="cargo" id="cargo" type="text" maxlength="40" required="required">
+
+      <label for="descricao">Descrição do cargo</label>
+      <input name="descricao" id="descricao" required="required" type="text" maxlength="500">
+
+      <label for="datainicio">Data de início</label>
+      <input name="datainicio" id="datainicio" type="text" required="required" pattern="(\d{2})[-.\/](\d{2})[-.\/](\d{4})">
+
+    </fieldset>
+
   </form>
 
   <script src="script.js"></script>
