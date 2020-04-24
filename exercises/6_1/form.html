@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  
+  <form action="" method="GET">
+
+    <fieldset id="fieldset">
+      
+      <div>
+        <label for="nome">Nome</label>
+        <input name="nome" id="nome" maxlength="40" required="required" placeholder="Digite seu nome" type="text">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input name="email" id="email" maxlength="50" required="required" placeholder="Digite seu e-mail" type="text">
+      </div>
+
+      <div>
+        <label for="cpf">CPF</label>
+        <input name="cpf" id="cpf" maxlength="11" required="required" placeholder="Digite seu CPF" type="number">
+      </div>
+
+      <div>
+        <label for="endereco">Endereço</label>
+        <input name="endereco" id="endereco" maxlength="200" required="required" placeholder="Digite seu Endereço" type="text">
+      </div>
+
+      <div>
+        <label for="cidade">Cidade</label>
+        <input name="cidade" id="cidade" maxlength="28" required="required" placeholder="Digite sua" type="text">
+      </div>
+
+      <div>
+        <label for="estado">Estado</label>
+        <select name="estado" id="estado" required="required">
+          <option value="empty">Select</option>
+        </select>
+      </div>
+
+      <div>
+        <p>Tipo</p>
+        <label for="tipo1"><input name="tipo" id="tipo1" value="casa"  type="radio"> Casa</label>
+        <label for="tipo2"><input name="tipo" id="tipo2" value="apartamento" type="radio"> Apartamento</label>
+      </div>
+
+    </fieldset>
+
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html> 
