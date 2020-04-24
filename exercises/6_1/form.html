@@ -60,7 +60,7 @@
       <label for="curriculo">Resumo do currículo</label><br>
       <textarea name="curriculo" id="curriculo" cols="50" rows="10" maxlength="1000" required="required"></textarea>
 
-      <label for="cargo"></label>
+      <label for="cargo">Cargo</label>
       <input name="cargo" id="cargo" type="text" maxlength="40" required="required">
 
       <label for="descricao">Descrição do cargo</label>
@@ -69,9 +69,16 @@
       <label for="datainicio">Data de início</label>
       <input name="datainicio" id="datainicio" type="text" required="required" pattern="(\d{2})[-.\/](\d{2})[-.\/](\d{4})">
 
+      <br>
+
+      <button id="enviar" type="submit">Enviar</button>
+      <button id="resetar" type="reset">Limpar</button>
+
     </fieldset>
 
   </form>
+
+
 
   <script src="script.js"></script>
 </body>
