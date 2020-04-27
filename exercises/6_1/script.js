@@ -7,3 +7,4 @@ for (let i = 0; i < estados.length; i += 1) {
   option.innerHTML = estados[i];
   inputEstados.appendChild(option);
 }
+
