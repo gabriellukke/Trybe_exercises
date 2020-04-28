@@ -6,9 +6,10 @@
   <title>Document</title>
 
   <!-- Semantic UI -->
-   <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+  <!-- DatePickerX -->
+  <link rel="stylesheet" href="dist/DatePickerX.min.css">
 
   <!-- Style CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -85,7 +86,7 @@
         
         <div class="field">
           <label for="datainicio">Data de início</label>
-          <input name="datainicio" id="datainicio" type="text" required="required" placeholder="Digite a data de início" pattern="(\d{2})[-.\/](\d{2})[-.\/](\d{4})">
+          <input name="datainicio" id="datainicio" type="text" required="required" placeholder="Digite a data de início">
         </div>
         
         <br>
@@ -104,7 +105,9 @@
     
   </section>
 
-
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="dist/DatePickerX.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html> 

@@ -15,42 +15,10 @@ function createStates() {
 const form = document.forms['user'];
 const enviarBtn = document.getElementById('enviar');
 const resetBtn = document.getElementById('resetar');
-const date = document.getElementById('data');
+const date = document.getElementById('datainicio');
 const userInfoSection = document.getElementById('userinfo');
 
-function checkDay(day) {
-  return day > 0 && 0 <= 31;
-}
 
-function checkMonth(month) {
-  return month > 0 && 0 <= 12;
-}
-
-function checkYear(year) {
-  return year > 0;
-}
-
-function msgError() {
-  alert('Digite a data corretamente');
-}
-
-function checkDate() {
-  const date = form.datainicio.value.split('/');
-  const day = checkDay(Number.parseInt(date[0], 10));
-  const month = checkMonth(Number.parseInt(date[1], 10));
-  const year = checkYear(Number.parseInt(date[2], 10))
-  return day && month && year;
-}
-
-function testDate() {
-  const date = form.datainicio.value.split('/');
-  const result =checkDate();
-  if (date === -1 || !result) {
-    msgError();
-  } else {
-    return true;
-  }
-}
 
 //Write User Data
 function userData() {
@@ -73,6 +41,11 @@ function eraseData() {}
 window.onload = function() {
 
   createStates();
+
+  date.DatePickerX.init({
+    format: 'dd/mm/yyyy',
+  })
+
   enviarBtn.addEventListener('click', function(event) {
     event.preventDefault();
     checkDate();
