@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #3aafab;
+  color: white;
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  padding: 50px 0;
+}
+
+.fieldset {
+  border: 0;
+  padding: 0 15px;
+}
+
+.fieldset div {
+  margin-bottom: 10px;
+  width: 70%;
+}
+
+.fieldset div label {
+  margin-right: 50px;
+}
+
+.fieldset div label input, .fieldset div input {
+  border-radius: 5px;
+  float: right;
+  height: 25px;
+  width: 75%;
+}
+
+button {
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  height: 35px;
+  width: 120px;
+}
+
+#enviar {
+  background-color: #33aaaa;
+  border: 2px solid green;
+}
+
+#enviar:hover {
+  background-color: green;
+}
+
+#resetar {
+  background-color: #33aaaa;
+  border: 2px solid tomato;
+}
+
+#resetar:hover {
+  background-color: tomato;
+}
+
+.tipo label input {
+  width: 500px;
+  border: 1px solid red;
+  margin-left: -15px;
+}
+
+#userinfo {
+  margin: 20px;
+  width: 70%;
+}
+
+#userinfo div p {
+  margin-left: 5px;
+}
+
+#userinfo div span {
+  margin: 5px 10px;
+  padding: 0 15px;
+  width: 10px;
+}
