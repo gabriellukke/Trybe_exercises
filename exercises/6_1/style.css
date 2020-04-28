@@ -59,3 +59,9 @@ button {
 #resetar:hover {
   background-color: tomato;
 }
+
+.tipo label input {
+  width: 500px;
+  border: 1px solid red;
+  margin-left: -15px;
+}
