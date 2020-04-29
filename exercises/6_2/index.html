@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Formulário de Currículo</title>
 
   <!-- Semantic UI -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
   <!-- DatePickerX -->
   <link rel="stylesheet" href="dist/DatePickerX.min.css">
+
+  <!-- Popup Validation -->
+  <link href="popup-validation-master/bin/validation.min.css" rel="stylesheet">
 
   <!-- Style CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -19,41 +22,42 @@
 
   <section id="container" class="ui container">
 
-    <form class="ui form" name="user" id="form" action="" method="GET">
+    <form class="ui form" name="user" id="myForm" action="" method="GET">
 
       <fieldset id="fieldset1" class="fieldset">
   
+        <div class="validate-popup"></div>
         <div class="field">
           <label for="nome">Nome</label>
-          <input name="nome" id="nome" maxlength="40" required="required" placeholder="Digite seu nome" type="text">
+          <input name="nome" id="nome" class="validate form-control" maxlength="40" data-validate="required" placeholder="Digite seu nome" type="text">
         </div>
-  
+        
         <div class="two fields">
           <div class="field">
             <label for="email">Email</label>
-            <input name="email" id="email" maxlength="50" required="required" placeholder="Digite seu e-mail" type="text">
+            <input name="email" id="email" class="validate form-control" maxlength="50" data-validate="required" placeholder="Digite seu e-mail" type="text">
           </div>
-    
+          
           <div class="field">
             <label for="cpf">CPF</label>
-            <input name="cpf" id="cpf" maxlength="11" required="required" placeholder="Digite seu CPF" type="number">
+            <input name="cpf" id="cpf" class="validate form-control" maxlength="11" data-validate="required" placeholder="Digite seu CPF" type="number">
           </div>
         </div>
 
         <div class="field">
           <label for="endereco">Endereço</label>
-          <input name="endereco" id="endereco" maxlength="200" required="required" placeholder="Digite seu endereço" type="text">
+          <input name="endereco" id="endereco" class="validate form-control" maxlength="200" data-validate="required" placeholder="Digite seu endereço" type="text">
         </div>
         
         <div class="two fields">
           <div class="field">
             <label for="cidade">Cidade</label>
-            <input name="cidade" id="cidade" maxlength="28" required="required" placeholder="Digite sua cidade" type="text">
+            <input name="cidade" id="cidade" class="validate form-control" maxlength="28" data-validate="required" placeholder="Digite sua cidade" type="text">
           </div>
     
           <div class="field">
             <label for="estado">Estado</label>
-            <select name="estado" id="estado" class="ui fluid dropdown" required="required">
+            <select name="estado" id="estado" class="ui fluid dropdown" data-validate="required">
               <option value="empty">Select</option>
             </select>
           </div>
@@ -61,7 +65,7 @@
   
         <div class="field">
           <p class="">Tipo</p>
-          <label for="tipo1"><input name="tipo" id="tipo1" value="casa"  type="radio"> Casa</label>
+          <label for="tipo1"><input name="tipo" id="tipo1" class="validate form-control" data-validate="required" value="casa"  type="radio"> Casa</label>
           <label for="tipo2"><input name="tipo" id="tipo2" value="apartamento" type="radio"> Apartamento</label>
         </div>
   
@@ -71,22 +75,22 @@
         
         <div class="field">
           <label for="curriculo">Resumo do currículo</label><br>
-          <textarea name="curriculo" id="curriculo" cols="50" rows="10" maxlength="1000" required="required" placeholder="Digite um breve resumo do seu currículo"></textarea>
+          <textarea name="curriculo" id="curriculo" class="validate form-control" cols="50" rows="10" maxlength="1000" data-validate="required" placeholder="Digite um breve resumo do seu currículo"></textarea>
         </div>
         
         <div class="field">
           <label for="cargo">Cargo</label>
-        <input name="cargo" id="cargo" type="text" maxlength="40" required="required" placeholder="Digite seu cargo">
+        <input name="cargo" id="cargo" class="validate form-control" type="text" maxlength="40" data-validate="required" placeholder="Digite seu cargo">
         </div>
         
         <div class="field">
           <label for="descricao">Descrição do cargo</label>
-          <input name="descricao" id="descricao" required="required" type="text" placeholder="Digite uma breve descrição do seu cargo" maxlength="500">
+          <input name="descricao" id="descricao" class="validate form-control" data-validate="required" type="text" placeholder="Digite uma breve descrição do seu cargo" maxlength="500">
         </div>
         
         <div class="field">
           <label for="datainicio">Data de início</label>
-          <input name="datainicio" id="datainicio" type="text" required="required" placeholder="Digite a data de início">
+          <input name="datainicio" id="datainicio" class="validate form-control" type="text" data-validate="required" placeholder="Digite a data de início">
         </div>
         
         <br>
@@ -105,9 +109,11 @@
     
   </section>
 
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script src="dist/DatePickerX.min.js"></script>
+  <script src="popup-validation-master/bin/validation.min.js"></script> 
   <script src="script.js"></script>
 </body>
 </html> 

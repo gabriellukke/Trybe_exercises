@@ -46,10 +46,11 @@ window.onload = function() {
     format: 'dd/mm/yyyy',
   })
 
+  validation.init('#myForm', {
+    events: ['submit', 'change', 'keyup', 'paste'],
+  })
   enviarBtn.addEventListener('click', function(event) {
     event.preventDefault();
-    checkDate();
-    testDate();
     userData();
   })
 
