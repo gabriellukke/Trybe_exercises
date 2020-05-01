@@ -1,0 +1,8 @@
+#pond {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+/* https://flexboxfroggy.com/ */
