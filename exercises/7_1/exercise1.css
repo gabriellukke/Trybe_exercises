@@ -16,3 +16,24 @@ img {
 figure {
   margin: 20px 0;
 }
+
+@media (min-width: 800px) {
+  body {
+    background-color: #ffffd9;
+    font-size: 18px;
+  }
+
+  figure {
+    max-width: 49%;
+    float: left;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1366px) {
+  body {
+    background-color: #fffaaa;
+    font-size: 16px;
+    margin: 20px;
+  }
+}
