@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercícios 7.2</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 90%;
+      height: 100px;
+      border: 1px solid red;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    .flex-direction__column { flex-direction: column; }
+    .justify-content__space-between { justify-content: space-between; }
+    .justify-content__center { justify-content: center; }
+    .align-items__flex-start { align-items: flex-start; }
+    .automatic-box-height { height: auto; }
+    .ball { border-radius: 100%; }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+    .red { background-color: red; }
+    .yellow { background-color: yellow; }
+    .black { background-color: black; }
+    .medium {
+      width: 50px;
+      height: 50px;
+    }
+
+    #exercise-4:hover {
+      animation: moveBall 5s;
+    }
+
+    #exercise-12 {
+      animation-duration: 1s;
+      animation-name: fade;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-play-state: paused;
+    }
+
+    #exercise-12:hover {
+      cursor: pointer;
+    }
+
+    #exercise-12:active {
+      animation-play-state: running;
+    }
+
+    /* #exercise-11_1,
+    #exercise-11_2,
+    #exercise-11_3,
+    #exercise-11_4,
+    #exercise-11_5 {
+      animation: moveAll 2s 3s infinite alternate;
+    }
+
+    #exercise-11_1 {
+      animation-timing-function: linear;
+    }
+
+    #exercise-11_2 {
+      animation-timing-function: ease;
+    }
+
+    #exercise-11_3 {
+      animation-timing-function: ease-in;
+    }
+
+    #exercise-11_4 {
+      animation-timing-function: ease-out;
+    }
+
+    #exercise-11_5 {
+      animation-timing-function: ease-in-out;
+    } */
+
+    @keyframes moveBall {
+
+      0% {
+        margin-left: 0;
+      }
+
+      100% {
+        margin-left: 96%;
+      }
+    }
+
+    @keyframes moveBallLeft {
+
+      0% {
+        margin-right: 0;
+      }
+
+      100% {
+        margin-right: 91%;
+      }
+    }
+
+    @keyframes backBall {
+
+      0% {
+        margin-left: 0;
+      }
+
+      50% {
+        margin-left: 96%;
+      }
+
+      100% {
+        margin-left: 0;
+      }
+    }
+
+    @keyframes stretch {
+
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    @keyframes altColor {
+      
+      0% {
+        background: red;
+      }
+
+      100% {
+        background: yellow;
+      }
+
+    }
+
+    @keyframes altColors4 {
+      
+      0% {
+        background: red;
+      }
+
+      25% {
+        background: yellow;
+      }
+
+      50% {
+        background: blue;
+      }
+
+      75% {
+        background: green;
+      }
+
+    }
+
+    @keyframes stretchColors {
+
+      0% {
+        background: red;
+        transform: scale(1);
+      }
+
+      25% {
+        background: yellow;
+      }
+
+      50% {
+        background: blue;
+      }
+
+      75% {
+        background: green;
+        width: 100%;
+      }
+
+    }
+
+    @keyframes moveAll {
+      
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 96%;
+      }
+
+    }
+
+    @keyframes fade {
+      
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+  <ol>
+    <li>
+      <section>
+        <div id="exercise-1" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section>
+        <div id="exercise-2" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section>
+        <div id="exercise-3" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section>
+        <div id="exercise-4" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section id="section-5">
+        <div id="exercise-5" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__space-between">
+        <div id="exercise-6-square" class="blue medium"></div>
+        <div id="exercise-6" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-7" class="blue medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-8" class="red medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-9" class="red medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-10" class="red medium"></div>
+      </section>
+    </li>
+      <li>
+        <section class="flex-direction__column align-items__flex-start automatic-box-height">
+          <div id="exercise-11_1" class="red medium"></div>
+          <div id="exercise-11_2" class="blue medium"></div>
+          <div id="exercise-11_3" class="green medium"></div>
+          <div id="exercise-11_4" class="yellow medium"></div>
+          <div id="exercise-11_5" class="black medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-12" class="black medium"></div>
+        </section>
+      </li>
+  </ol>
+
+  <script>
+
+    const div1 = document.getElementById('exercise-1');
+    const div2 = document.getElementById('exercise-2');
+    const div3 = document.getElementById('exercise-3');
+    const div4 = document.getElementById('exercise-4');
+    const div5 = document.getElementById('exercise-5');
+    const sectionDiv5 = div5.parentElement;
+    const div6 = document.getElementById('exercise-6');
+    const blueSquare = document.getElementById('exercise-6-square');
+    const div7 = document.getElementById('exercise-7');
+    const div8 = document.getElementById('exercise-8');
+    const div9 = document.getElementById('exercise-9');
+    const div10 = document.getElementById('exercise-10');
+    const div111 = document.getElementById('exercise-11_1');
+    const div112 = document.getElementById('exercise-11_2');
+    const div113 = document.getElementById('exercise-11_3');
+    const div114 = document.getElementById('exercise-11_4');
+    const div115 = document.getElementById('exercise-11_5');
+
+    window.onload = function () {
+      setTimeout(function () {
+        div1.style.animationDuration = '3s';
+        div1.style.animationName = 'moveBall';
+        div1.style.animationFillMode = 'forwards';
+      }, 1000);
+
+      setTimeout(function () {
+        div2.style.animationDuration = '2s';
+        div2.style.animationName = 'moveBall';
+        div2.style.animationFillMode = 'forwards';
+      }, 1000);
+
+      setTimeout(function () {
+        div3.style.animationDuration = '1s';
+        div3.style.animationName = 'backBall';
+        div3.style.animationFillMode = 'alternate';
+      }, 1000);
+
+      sectionDiv5.addEventListener('mouseover', function () {
+        div5.style.animationDuration = '5s';
+        div5.style.animationName = 'moveBall';
+        div5.style.animationFillMode = 'forwards';
+      });
+
+      blueSquare.addEventListener('mouseover', function () {
+        div6.style.animationDuration = '5s';
+        div6.style.animationName = 'moveBallLeft';
+        div6.style.animationFillMode = 'backwards';
+      });
+
+      setTimeout(function () {
+        div7.style.animationDuration = '10s';
+        div7.style.animationDirection = 'alternate';
+        div7.style.animationName = 'stretch';
+        div7.style.animationIterationCount = 'infinite';
+      }, 1000);
+
+      setTimeout(function () {
+        div8.style.animationDuration = '4s';
+        div8.style.animationName = 'altColor';
+      }, 1000);
+
+      setTimeout(function () {
+        div9.style.animationDuration = '4s';
+        div9.style.animationDirection = 'alternate';
+        div9.style.animationName = 'altColors4';
+        div9.style.animationIterationCount = 'infinite';
+      }, 1000);
+
+      setTimeout(function () {
+        div10.style.animationDuration = '10s';
+        div10.style.animationDirection = 'alternate';
+        div10.style.animationName = 'stretchColors';
+        div10.style.animationIterationCount = 'infinite';
+      }, 1000);
+
+      setTimeout(function () {
+        div111.style.animation = 'moveAll 2s 3s infinite alternate';
+        div111.style.animationTimingFunction = 'linear'
+        div112.style.animation = 'moveAll 2s 3s infinite alternate';
+        div112.style.animationTimingFunction = 'ease';
+        div113.style.animation = 'moveAll 2s 3s infinite alternate';
+        div113.style.animationTimingFunction = 'ease-in'
+        div114.style.animation = 'moveAll 2s 3s infinite alternate';
+        div114.style.animationTimingFunction = 'ease-out';
+        div115.style.animation = 'moveAll 2s 3s infinite alternate';
+        div115.style.animationTimingFunction = 'ease-in-out';
+      }, 2000);
+    };
+
+  </script>
+</body>
+</html>
