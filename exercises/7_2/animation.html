@@ -46,6 +46,20 @@
       }
     }
 
+    @keyframes backBall {
+      0% {
+        margin-left: 0;
+      }
+
+      50% {
+        margin-left: 95%;
+      }
+
+      100% {
+        margin-left: 0;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -121,6 +135,7 @@
 
     const div1 = document.getElementById('exercise-1');
     const div2 = document.getElementById('exercise-2');
+    const div3 = document.getElementById('exercise-3');
 
     window.onload = function () {
       setTimeout(function () {
@@ -133,6 +148,12 @@
         div2.style.animationDuration = '2s';
         div2.style.animationName = 'moveBall';
         div2.style.animationFillMode = 'forwards';
+      }, 1000);
+
+      setTimeout(function () {
+        div3.style.animationDuration = '1s';
+        div3.style.animationName = 'backBall'
+        div3.style.animationFillMode = 'forwards'
       }, 1000);
     };
 
