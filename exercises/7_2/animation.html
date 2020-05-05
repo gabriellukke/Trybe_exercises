@@ -120,6 +120,28 @@
 
     }
 
+    @keyframes stretchColors {
+
+      0% {
+        background: red;
+        transform: scale(1);
+      }
+
+      25% {
+        background: yellow;
+      }
+
+      50% {
+        background: blue;
+      }
+
+      75% {
+        background: green;
+        width: 100%;
+      }
+
+    }
+
   </style>
 </head>
 <body>
@@ -204,6 +226,7 @@
     const div7 = document.getElementById('exercise-7');
     const div8 = document.getElementById('exercise-8');
     const div9 = document.getElementById('exercise-9');
+    const div10 = document.getElementById('exercise-10');
 
     window.onload = function () {
       setTimeout(function () {
@@ -238,21 +261,29 @@
 
       setTimeout(function () {
         div7.style.animationDuration = '10s';
+        div7.style.animationDirection = 'alternate';
         div7.style.animationName = 'stretch';
         div7.style.animationIterationCount = 'infinite';
-      });
+      }, 1000);
 
       setTimeout(function () {
         div8.style.animationDuration = '4s';
         div8.style.animationName = 'altColor';
-      });
+      }, 1000);
 
       setTimeout(function () {
         div9.style.animationDuration = '4s';
+        div9.style.animationDirection = 'alternate';
         div9.style.animationName = 'altColors4';
         div9.style.animationIterationCount = 'infinite';
-        div9.style.animationDirection = 'alternate';
-      })
+      }, 1000);
+
+      setTimeout(function () {
+        div10.style.animationDuration = '10s';
+        div10.style.animationDirection = 'alternate';
+        div10.style.animationName = 'stretchColors';
+        div10.style.animationIterationCount = 'infinite';
+      }, 1000)
     };
 
   </script>
