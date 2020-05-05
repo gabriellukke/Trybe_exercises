@@ -120,12 +120,19 @@
   <script>
 
     const div1 = document.getElementById('exercise-1');
+    const div2 = document.getElementById('exercise-2');
 
     window.onload = function () {
       setTimeout(function () {
         div1.style.animationDuration = '3s';
         div1.style.animationName = 'moveBall';
         div1.style.animationFillMode = 'forwards';
+      }, 1000);
+
+      setTimeout(function () {
+        div2.style.animationDuration = '2s';
+        div2.style.animationName = 'moveBall';
+        div2.style.animationFillMode = 'forwards';
       }, 1000);
     };
 
