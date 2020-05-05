@@ -41,6 +41,7 @@
     }
 
     @keyframes moveBall {
+
       0% {
         margin-left: 0;
       }
@@ -51,6 +52,7 @@
     }
 
     @keyframes moveBallLeft {
+
       0% {
         margin-right: 0;
       }
@@ -61,6 +63,7 @@
     }
 
     @keyframes backBall {
+      
       0% {
         margin-left: 0;
       }
@@ -72,6 +75,29 @@
       100% {
         margin-left: 0;
       }
+    }
+
+    @keyframes stretch {
+
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    @keyframes altColor {
+      
+      0% {
+        background: red;
+      }
+
+      100% {
+        background: yellow;
+      }
+
     }
 
   </style>
@@ -155,6 +181,8 @@
     const sectionDiv5 = div5.parentElement;
     const div6 = document.getElementById('exercise-6');
     const blueSquare = document.getElementById('exercise-6-square');
+    const div7 = document.getElementById('exercise-7');
+    const div8 = document.getElementById('exercise-8');
 
     window.onload = function () {
       setTimeout(function () {
@@ -185,6 +213,17 @@
         div6.style.animationDuration = '5s';
         div6.style.animationName = 'moveBallLeft';
         div6.style.animationFillMode = 'backwards';
+      });
+
+      setTimeout(function () {
+        div7.style.animationDuration = '10s';
+        div7.style.animationName = 'stretch';
+        div7.style.animationIterationCount = 'infinite';
+      });
+
+      setTimeout(function () {
+        div8.style.animationDuration = '4s';
+        div8.style.animationName = 'altColor';
       });
     };
 
