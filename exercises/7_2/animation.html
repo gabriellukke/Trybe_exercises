@@ -46,7 +46,17 @@
       }
 
       100% {
-        margin-left: 95%;
+        margin-left: 96%;
+      }
+    }
+
+    @keyframes moveBallLeft {
+      0% {
+        margin-right: 0;
+      }
+
+      100% {
+        margin-right: 91%;
       }
     }
 
@@ -56,7 +66,7 @@
       }
 
       50% {
-        margin-left: 95%;
+        margin-left: 96%;
       }
 
       100% {
@@ -143,6 +153,8 @@
     const div4 = document.getElementById('exercise-4');
     const div5 = document.getElementById('exercise-5');
     const sectionDiv5 = div5.parentElement;
+    const div6 = document.getElementById('exercise-6');
+    const blueSquare = document.getElementById('exercise-6-square');
 
     window.onload = function () {
       setTimeout(function () {
@@ -167,6 +179,12 @@
         div5.style.animationDuration = '5s';
         div5.style.animationName = 'moveBall';
         div5.style.animationFillMode = 'forwards';
+      });
+
+      blueSquare.addEventListener('mouseover', function () {
+        div6.style.animationDuration = '5s';
+        div6.style.animationName = 'moveBallLeft';
+        div6.style.animationFillMode = 'backwards';
       });
     };
 
