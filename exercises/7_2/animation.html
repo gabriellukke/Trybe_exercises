@@ -63,7 +63,7 @@
     }
 
     @keyframes backBall {
-      
+
       0% {
         margin-left: 0;
       }
@@ -96,6 +96,26 @@
 
       100% {
         background: yellow;
+      }
+
+    }
+
+    @keyframes altColors4 {
+      
+      0% {
+        background: red;
+      }
+
+      25% {
+        background: yellow;
+      }
+
+      50% {
+        background: blue;
+      }
+
+      75% {
+        background: green;
       }
 
     }
@@ -183,6 +203,7 @@
     const blueSquare = document.getElementById('exercise-6-square');
     const div7 = document.getElementById('exercise-7');
     const div8 = document.getElementById('exercise-8');
+    const div9 = document.getElementById('exercise-9');
 
     window.onload = function () {
       setTimeout(function () {
@@ -225,6 +246,13 @@
         div8.style.animationDuration = '4s';
         div8.style.animationName = 'altColor';
       });
+
+      setTimeout(function () {
+        div9.style.animationDuration = '4s';
+        div9.style.animationName = 'altColors4';
+        div9.style.animationIterationCount = 'infinite';
+        div9.style.animationDirection = 'alternate';
+      })
     };
 
   </script>
