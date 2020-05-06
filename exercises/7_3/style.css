@@ -29,7 +29,7 @@ img:hover {
 }
 
 .rotate {
-  animation: rotate 1s linear;
+  animation: rotate 500ms linear;
 }
 
 .scale {
