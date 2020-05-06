@@ -1,0 +1,61 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border-radius: 12px;
+  box-shadow: 0 0 15px white;
+  cursor: pointer;
+  margin: 20px 10px;
+  width: 100px;
+}
+
+img:hover {
+  box-shadow: 0 0 30px black;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rotate {
+  animation: rotate 500ms linear;
+}
+
+.scale {
+  animation: scale 1s linear alternate;
+}
+
+@keyframes rotate {
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes scale {
+
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+
+}
