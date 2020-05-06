@@ -1,4 +1,4 @@
-const longestWord = (phrase) => { 
+const longestWord = phrase => { 
   const arr = phrase.split(' ');
   let word = arr[0];
   for (let i = 0; i < arr.length; i += 1) {
