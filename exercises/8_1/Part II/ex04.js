@@ -6,7 +6,6 @@ const skills = [
   'JavaScript'
 ];
 
-
 const replaceStr = str => {
   const phrase = `Tryber x aqui!
 Tudo bem ?`;
@@ -15,7 +14,7 @@ Tudo bem ?`;
 
 const mySkills = str => {
   return `${str}
-Minhas cinco habilidades são: 
+Minhas cinco habilidades são:
 
 ${skills.sort().join(', \n')}
 #goTrybe`;
