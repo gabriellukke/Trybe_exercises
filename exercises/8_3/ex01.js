@@ -17,5 +17,5 @@ assert.equal(sum(0, 0), 0);
 // Test 3
 assert.throws(() => { sum(4, '5') }, Error);
 
-// Test 4
+// Test
 assert.throws(() => { sum(4, '5') }, /^Error: parameters must be numbers/);
