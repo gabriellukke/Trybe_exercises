@@ -1,0 +1,27 @@
+const assert = require('assert');
+// escreva a função findTheNeedle para passar nos testes abaixo:
+const findTheNeedle = (arr, str) => {
+  arrSize = arr.length + 1;
+  strPos = arr.indexOf(str);
+  if (strPos === -1 || strPos === 0) {
+    result = strPos;
+  } else {
+    result = arrSize - strPos;
+  }
+  return result;
+}
+//
+let words = ['house', 'train', 'slide', 'needle', 'book'];
+let expected = 3;
+let output = findTheNeedle(words, 'needle');
+assert.strictEqual(output, expected);
+
+words = ['plant', 'shelf', 'arrow', 'bird'];
+expected = 0;
+output = findTheNeedle(words, 'plant');
+assert.strictEqual(output, expected);
+
+words = ['plant', 'shelf', 'arrow', 'bird'];
+expected = -1;
+output = findTheNeedle(words, 'plat');
+assert.strictEqual(output, expected);
