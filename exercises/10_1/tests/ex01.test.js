@@ -21,4 +21,4 @@ describe('sum', () => {
     .toThrow(/parameters must be numbers/)
   });
 
-})
+});
