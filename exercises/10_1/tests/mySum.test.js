@@ -1,4 +1,4 @@
-const mySum = require('../src/ex03');
+const mySum = require('../src/mySum');
 
 describe('mySum', () => {
 

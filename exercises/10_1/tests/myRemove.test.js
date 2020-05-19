@@ -1,4 +1,4 @@
-const myRemove = require('../src/ex04');
+const myRemove = require('../src/myRemove');
 
 describe('myRemove', () => {
 

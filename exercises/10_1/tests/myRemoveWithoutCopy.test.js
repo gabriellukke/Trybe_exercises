@@ -1,4 +1,4 @@
-const myRemoveWithoutCopy = require('../src/ex05');
+const myRemoveWithoutCopy = require('../src/myRemoveWithoutCopy');
 
 describe('myRemoveWithoutCopy', () => {
 

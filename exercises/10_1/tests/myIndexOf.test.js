@@ -1,4 +1,4 @@
-const myIndexOf = require('../src/ex02');
+const myIndexOf = require('../src/myIndexOf');
 
 describe('myIndexOf', () => {
 
