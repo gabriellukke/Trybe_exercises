@@ -7,8 +7,12 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {
-
-}
+const palindrome = str => {
+  let array = str.split('')
+  let itsPali = false;
+  for (let i = 0; i < array.length; i += 1) {
+    return array[i] === array[array.length - i - 1] ? itsPali = true : itsPali;
+  };
+};
 
 module.exports = palindrome;
