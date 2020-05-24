@@ -10,7 +10,7 @@ const promise = () => {
   
   myPromise
   .then((sumOfAll) => [2, 3, 5, 10].map(n => sumOfAll / n))
-  .catch(() => console.log('Oh no'))
+  .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'))
 };
 
 promise();
