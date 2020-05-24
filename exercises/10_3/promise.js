@@ -9,7 +9,7 @@ const promise = () => {
   });
   
   myPromise
-  .then(() => console.log('The promise was fulfilled!'))
+  .then((sumOfAll) => [2, 3, 5, 10].map(n => sumOfAll / n))
   .catch(() => console.log('Oh no'))
 };
 
