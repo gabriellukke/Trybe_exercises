@@ -3,7 +3,6 @@
     "test": "jest --watch"
   },
   "dependencies": {
-    "jest": "^26.0.1",
-    "node-fetch": "^2.6.0"
+    "jest": "^26.0.1"
   }
 }
