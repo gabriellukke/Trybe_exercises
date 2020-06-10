@@ -16,7 +16,10 @@ class App extends Component {
       addressType: {
         house: false,
         apartament: false,
-      }
+      },
+      resume: '',
+      role: '',
+      roleDescription: '',
     }
   }
 
@@ -104,6 +107,38 @@ class App extends Component {
                 />
                 Apartamento
               </label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Dados Profissionais</legend>
+            <div className="container">
+              Resumo do currículo:
+              <textarea 
+              name="resume"
+              maxLength="1000"
+              required
+              value={this.state.resume}
+              />
+            </div>
+            <div className="container">
+              Cargo:
+              <input
+              type="text"
+              name="role"
+              maxLength="40"
+              required
+              value={this.state.role}
+              onMouseEnter={() => {alert('Preencha com cuidado esta informação')}}
+              />
+            </div>
+            <div className="container">
+              Descrição do Cargo:
+              <textarea 
+              name="roleDescription"
+              maxLength="500"
+              required
+              value={this.state.roleDescription}
+              />
             </div>
           </fieldset>
         </form>
