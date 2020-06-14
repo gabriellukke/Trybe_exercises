@@ -1,0 +1,62 @@
+body {
+  background: #3aafab;
+  color: white;
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  padding: 50px 0;
+}
+
+.main {
+  display: flex;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+fieldset {
+  display: flex;
+  width: 50%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 100%;
+}
+
+.container input {
+  width: 70%;
+  height: 25px;
+}
+
+.container textarea {
+  width: 70%;
+  height: 100px;
+}
+
+.radio-container {
+  align-items: center;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+}
+
+.btn-render {
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  width: 15%;
+}
+.btn-render:hover {
+  border: 2px solid white;
+  background-color: white;
+  color: orange;
+  cursor: pointer;
+}
