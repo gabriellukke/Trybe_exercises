@@ -23,10 +23,26 @@ class App extends Component {
     }
   }
 
+  updateState = (name, value) => {
+    this.setState({
+      [name]: value, 
+    })
+  }
+
+  changeHandler = (event) => {
+    let { name, value } = event.target;
+
+    if(name === 'name') value = value.toUpperCase
+
+    this.updateState(name, value)
+  }
+
+  handleSubmit = event => event.preventDefault();
 
   render() {
+
     return (
-      <div>
+      <div className="main">
         <form>
           <fieldset>
             <legend>Dados Pessoais</legend>
@@ -38,6 +54,7 @@ class App extends Component {
               maxLength="40"
               required
               value={this.state.name}
+              onChange={this.changeHandler}
               />
             </div>
             <div className="container">
@@ -48,6 +65,7 @@ class App extends Component {
               maxLength="50"
               required
               value={this.state.email}
+              onChange={this.changeHandler}
               />
             </div>
             <div className="container">
@@ -58,6 +76,7 @@ class App extends Component {
               maxLength="11"
               required
               value={this.state.cpf}
+              onChange={this.changeHandler}
               />
             </div>
             <div className="container">
@@ -68,6 +87,7 @@ class App extends Component {
               maxLength="200"
               required
               value={this.state.address}
+              onChange={this.changeHandler}
               />
             </div>
             <div className="container">
@@ -77,6 +97,7 @@ class App extends Component {
               name="city"
               maxLength="28"
               value={this.state.city}
+              onChange={this.changeHandler}
               />
             </div>
             <div className="container">
@@ -86,10 +107,12 @@ class App extends Component {
               name="countryState"
               required
               value={this.state.countryState}
-              />
+              onChange={this.changeHandler}
+              >
               {states.sort().map((value, key) => <option key={key}>{value}</option>)}
+              </select>
             </div>
-            <div>
+            <div className="radio-container">
               Tipo:
               <label>
                 <input
@@ -118,6 +141,7 @@ class App extends Component {
               maxLength="1000"
               required
               value={this.state.resume}
+              onChange={this.changeHandler}
               />
             </div>
             <div className="container">
@@ -128,6 +152,7 @@ class App extends Component {
               maxLength="40"
               required
               value={this.state.role}
+              onChange={this.changeHandler}
               onMouseEnter={() => {alert('Preencha com cuidado esta informação')}}
               />
             </div>
@@ -138,9 +163,13 @@ class App extends Component {
               maxLength="500"
               required
               value={this.state.roleDescription}
+              onChange={this.changeHandler}
               />
             </div>
           </fieldset>
+          <button className="btn-render">
+            Mostrar Informações
+          </button>
         </form>
       </div>
     )
