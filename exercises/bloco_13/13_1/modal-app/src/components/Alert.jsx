@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './Alert.css';
 
 const Alert = (props) => {
-  const { hideComponent, contentTitle, content } = props;
-  setTimeout(() => hideComponent(), 3000);
+  const { hideComponent, children: { contentTitle, content, timeSeconds } } = props;
+  setTimeout(() => hideComponent(),  timeSeconds * 1000);
   return (
     <div className="Alert">
       <h1>{contentTitle}</h1>
@@ -15,8 +15,19 @@ const Alert = (props) => {
 
 Alert.propTypes = {
   hideComponent: PropTypes.func.isRequired,
-  content: PropTypes.string.isRequired,
-  contentTitle: PropTypes.string.isRequired,
+  children: PropTypes.shape({
+    content: PropTypes.string.isRequired,
+    contentTitle: PropTypes.string.isRequired,
+    timeSeconds: PropTypes.number.isRequired,
+  })
+}
+
+Alert.defaultProps = {
+  children: {
+    title: "Algum título",
+    content: "Algum conteúdo",
+    timeSeconds: 3,
+  }
 }
 
 export default Alert;
