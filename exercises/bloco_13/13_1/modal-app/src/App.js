@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      showModal = false,
+      showModal: false,
       isDisableButton: false,
     }
   }
@@ -17,10 +17,12 @@ class App extends Component {
   }
 
   changeShowComponent = () => {
-    this.setState((state) => {
-      showModal: !state.showModal,
-      isDisableButton: !state.isDisableButton,
-    })
+    this.setState((state) => (
+      {
+        showModal: !state.showModal,
+        isDisableButton: !state.isDisableButton,
+    }
+    ))
   }
 
   render() {

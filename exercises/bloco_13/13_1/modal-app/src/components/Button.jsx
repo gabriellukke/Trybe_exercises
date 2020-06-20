@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   const { showComponent, isDisable, content } = props;
+  return (
   <button
   type="button"
   disabled={isDisable}
@@ -10,6 +11,7 @@ const Button = (props) => {
   >
     {content}
   </button>
+  )
 }
 
 Button.propTypes = {
