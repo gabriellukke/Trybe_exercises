@@ -1,0 +1,27 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  transition: width 1s;
+  transition-timing-function: linear;
+}
+
+.dropdown-btn {
+  background-color: white;
+  width: 50px;
+  height: 20px;
+  border: 1px solid;
+}
+
+.dropdown-menu {
+  background-color: white;
+  border: 1px solid;
+  width: 200px;
+}
+
+.dropdown-menu-hidden {
+  display: none;
+}
