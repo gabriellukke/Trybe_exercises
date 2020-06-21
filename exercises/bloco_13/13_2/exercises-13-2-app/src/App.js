@@ -13,6 +13,19 @@ class App extends React.Component {
     this.fetchDog();
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.data.message.includes('terrier')) {
+      return false;
+    }
+    return true;
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem("dogURL", this.state.data.message);
+    const dogBreed = this.state.data.message.split("/")[4];
+    alert(dogBreed);
+  }
+
   fetchDog() {
     fetch('https://dog.ceo/api/breeds/image/random')
       .then(data => data.json())
