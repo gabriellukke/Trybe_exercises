@@ -1,6 +1,6 @@
 import React from 'react';
-import Pokemon from './pokemon';
-import Button from './button';
+import Pokemon from './Pokemon';
+import Button from './Button';
 import pokemons from '../data';
 
 
