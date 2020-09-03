@@ -1,1 +1,1 @@
-db.bios.find({_id: 8}, { name: true })
+db.bios.find({_id: 8}, { name: 1 })
